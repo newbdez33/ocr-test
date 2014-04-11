@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic, weak) IBOutlet UIImageView *photoView;
+@property (nonatomic, weak) IBOutlet UILabel *textLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+- (IBAction)takePhoto:(id)sender;
+- (IBAction)selectPhoto:(id)sender;
+- (IBAction)recognizeIt:(id)sender;
 
 @end
